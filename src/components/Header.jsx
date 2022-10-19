@@ -1,12 +1,15 @@
-import React from "react";
+// import React from "react";
+import Navbar from "./Navbar.jsx";
 
 export default function Header() {
-  return <header className="header">
-    <ul>
-        <li>Misfits Academy</li>
-        <li>Cours</li>
-        <li>Inscriptions</li>
-        <li>Contact</li>
-    </ul>
-  </header>;
+  return (
+    <header>
+      <Navbar />
+      <img
+        className="header-logo"
+        src={"images/MisfitsAcademyLogoPurpleWhite.PNG"}
+        alt="Logo Misfits Academy"
+      />
+    </header>
+  );
 }
