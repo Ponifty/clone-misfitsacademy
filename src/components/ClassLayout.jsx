@@ -4,10 +4,16 @@ import ClassGrid from "./ClassGrid.jsx";
 
 export default function ClassLayout() {
   return (
-    <main className="class-container">
-      <h1>Cours - Styles - Niveaux</h1>
+    <>
+      <div className="class-logo">
+        <img
+          src={"images/MisfitsAcademyLogoPurpleWhite.PNG"}
+          alt="Logo Misfits Academy"
+        />
+      </div>
+      <h1 className="class-title">Cours - Styles - Niveaux</h1>
       <ClassCarousel />
       <ClassGrid />
-    </main>
+    </>
   );
 }
