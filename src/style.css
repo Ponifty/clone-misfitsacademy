@@ -89,8 +89,8 @@ header {
 .class-carousel {
   position: relative;
   display: flex;
+  justify-content: center;
   gap: 1em;
-  width: 100%;
 }
 
 .class-carousel__arrow {
@@ -98,17 +98,17 @@ header {
   top: 50%;
   bottom: 0;
   height: 50px;
-  /* transform: translateY(-50%); */
+  transform: translateY(-50%);
   color: #e7e7e7;
 }
 
 .class-carousel__arrow--left {
-  left: 0;
+  left: 0em;
   margin-left: 1em;
 }
 
 .class-carousel__arrow--right {
-  right: 0;
+  right: 0em;
   margin-right: 1em;
 }
 
@@ -127,6 +127,7 @@ header {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 0.1em;
+  max-width: 92%;
 }
 
 .class-grid__item {
@@ -209,6 +210,14 @@ header {
 .contact-socialmedia {
   font-size: 3em;
   margin: 0 0.5em;
+}
+
+.contact-socialmedia--insta {
+  color: #e66465;
+}
+
+.contact-socialmedia--facebook {
+  color: #3d599a;
 }
 
 .contact-form {
