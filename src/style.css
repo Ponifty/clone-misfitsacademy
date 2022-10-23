@@ -61,6 +61,9 @@ header {
   align-items: center;
   gap: 1em;
 }
+
+/* DANCE CLASSES PAGE */
+
 .class-logo {
   width: 60rem;
   max-height: 15rem;
@@ -87,7 +90,7 @@ header {
   position: relative;
   display: flex;
   gap: 1em;
-  /* width: 80%; */
+  width: 100%;
 }
 
 .class-carousel__arrow {
@@ -121,8 +124,130 @@ header {
 }
 
 .class-grid {
-  display: grid
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.1em;
 }
+
 .class-grid__item {
+  padding: 1em;
   border-radius: 1em;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.class-grid__item p {
+  margin-top: 0;
+}
+
+.class-grid__item p:nth-child(2) {
+  font-weight: bold;
+}
+
+.class-grid__item p:nth-child(2) {
+  margin-bottom: 0;
+}
+
+.class-grid__item button {
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: transparent;
+  border: 0.1px solid lightgray;
+  border-radius: 0.5em;
+  padding: 0.5em 5em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.class-grid__item1 {
+  background-color: #0c68ff;
+}
+
+.class-grid__item2 {
+  background-color: #812da3;
+}
+
+.class-grid__item3 {
+  background-color: #a12932;
+}
+
+.class-grid__item4 {
+  background-color: #0d92b7;
+}
+
+.class-grid__item5 {
+  background-color: #e84581;
+}
+
+.class-grid__item6 {
+  background-color: #03c7fc;
+}
+
+.class-grid__item7 {
+  background-color: #cc2e2e;
+}
+
+.class-grid__item8 {
+  background-color: #ff6801;
+}
+
+.class-grid__item9 {
+  background-color: #75ba41;
+}
+
+.class-grid__item10 {
+  background-color: #ffaa01;
+}
+
+/* CONTACT PAGE */
+
+.contact-socialmedia {
+  font-size: 3em;
+  margin: 0 0.5em;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
+  border-radius: 1em;
+  background-color: #772fb3;
+  padding: 4em;
+}
+
+.contact-form input {
+  padding: 0.5em;
+  border-radius: 0.3em;
+}
+
+.contact-form input:not(#submit) {
+  width: 100%;
+  border: none;
+}
+
+.contact-form input:hover {
+  box-shadow: inset 0 0 10px #772fb3, 0 0 9px 3px #772fb3;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: #f2bf5e;
+}
+
+.contact-form textarea {
+  background-color: #d4c2e2;
+  width: 100%;
+  border-radius: 0.5em;
+  padding: 1em 0.5em;
+}
+
+.contact-form textarea:hover {
+  background-color: #fff;
 }

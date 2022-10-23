@@ -1,4 +1,5 @@
 import React from "react";
+import ContactMedias from "./ContactMedias";
 
 export default function ContactForm() {
   const handleSubmit = (event) => {
@@ -33,7 +34,8 @@ export default function ContactForm() {
   return (
     <>
       <h2 className="contact-title">Contactez-nous</h2>
-      <form onSubmit={handleSubmit}>
+      <ContactMedias />
+      <form className="contact-form" onSubmit={handleSubmit}>
         <label htmlFor="name"></label>
         <input
           type="text"
@@ -69,7 +71,7 @@ export default function ContactForm() {
           onChange={handleChange}
         />
         <div style={{ color: "red" }}>{error}</div>
-        <input type="submit" value="Envoyer" />
+        <input id="submit" type="submit" value="Envoyer" />
       </form>
     </>
   );
