@@ -4,16 +4,22 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 
 export default function ContactMedias() {
+  const facebookLink = "https://www.facebook.com/misfitsacademy";
+  const instaLink = "https://www.instagram.com/misfitsacademy/";
   return (
     <div className="contact-socialmedia-box">
-      <FontAwesomeIcon
-        className="contact-socialmedia contact-socialmedia--insta"
-        icon={faInstagram}
-      />
-      <FontAwesomeIcon
-        className="contact-socialmedia contact-socialmedia--facebook"
-        icon={faSquareFacebook}
-      />
+      <a href={instaLink} target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon
+          className="contact-socialmedia contact-socialmedia--insta"
+          icon={faInstagram}
+        />
+      </a>
+      <a href={facebookLink} target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon
+          className="contact-socialmedia contact-socialmedia--facebook"
+          icon={faSquareFacebook}
+        />
+      </a>
     </div>
   );
 }
