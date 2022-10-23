@@ -241,7 +241,7 @@ header {
   border: none;
 }
 
-.contact-form input:hover {
+.contact-form input:not(#submit):hover {
   box-shadow: inset 0 0 10px #772fb3, 0 0 9px 3px #772fb3;
 }
 
@@ -259,4 +259,17 @@ header {
 
 .contact-form textarea:hover {
   background-color: #fff;
+}
+
+.contact-form input[type="submit"] {
+  margin-top: 2em;
+  padding: 1em 3em;
+  font-weight: bold;
+  border: 1px solid #000;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
 }
