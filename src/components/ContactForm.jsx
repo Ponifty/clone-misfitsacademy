@@ -1,6 +1,21 @@
 import React from "react";
 import ContactMedias from "./ContactMedias";
 
+function PairLabelInput({ name, type, htmlFor, value, onChange }) {
+  return (
+    <>
+      <label htmlFor={htmlFor}></label>
+      <input
+        type={type}
+        id={htmlFor}
+        name={`${name}Input`}
+        value={value}
+        onChange={onChange}
+      />
+    </>
+  );
+}
+
 export default function ContactForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -31,34 +46,31 @@ export default function ContactForm() {
       default:
     }
   };
+
   return (
     <>
       <h2 className="contact-title">Contactez-nous</h2>
       <ContactMedias />
       <form className="contact-form" onSubmit={handleSubmit}>
-        <label htmlFor="name"></label>
-        <input
-          type="text"
-          id="name"
-          name="nameInput"
+        <PairLabelInput
+          name={"name"}
           value={name}
+          type={"text"}
+          htmlFor={"name"}
           onChange={handleChange}
         />
-        <label htmlFor="email"></label>
-        <input
-          type="email"
-          id="email"
-          name="emailInput"
-          //   defaultValue="Email"
+        <PairLabelInput
+          name={"email"}
           value={email}
+          type={"text"}
+          htmlFor={"email"}
           onChange={handleChange}
         />
-        <label htmlFor="subject"></label>
-        <input
-          type="text"
-          id="subject"
-          name="subjectInput"
+        <PairLabelInput
+          name={"subject"}
           value={subject}
+          type={"text"}
+          htmlFor={"subject"}
           onChange={handleChange}
         />
         <label htmlFor="message"></label>

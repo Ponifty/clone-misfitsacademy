@@ -1,22 +1,25 @@
 // import React from "react";
 
+const NavbarLink = ({ name, path = "#", className }) => (
+  <a href={path} className={className}>
+    {name}
+  </a>
+);
+
 export default function Navbar() {
-  const link = "#";
   return (
     <ul className="navbar">
       <li>
-        <a href={link}>Misfits Academy</a>
+        <NavbarLink name={"Misfits Academy"}></NavbarLink>
       </li>
       <li>
-        <a href={link} className="active">
-          Cours
-        </a>
+        <NavbarLink name={"Cours"} className={"active"}></NavbarLink>
       </li>
       <li>
-        <a href={link}>Inscription</a>
+        <NavbarLink name={"Inscription"}></NavbarLink>
       </li>
       <li>
-        <a href={link}>Contact</a>
+        <NavbarLink name={"Contact"}></NavbarLink>
       </li>
     </ul>
   );
