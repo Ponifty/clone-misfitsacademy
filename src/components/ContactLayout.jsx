@@ -16,7 +16,7 @@ function PairLabelInput({ name, type, htmlFor, value, onChange }) {
   );
 }
 
-export default function ContactForm() {
+export default function ContactLayout() {
   const handleSubmit = (event) => {
     event.preventDefault();
   };
@@ -49,42 +49,44 @@ export default function ContactForm() {
 
   return (
     <>
-      <h2 className="contact-title">Contactez-nous</h2>
-      <ContactMedias />
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <PairLabelInput
-          name={"name"}
-          value={name}
-          type={"text"}
-          htmlFor={"name"}
-          onChange={handleChange}
-        />
-        <PairLabelInput
-          name={"email"}
-          value={email}
-          type={"text"}
-          htmlFor={"email"}
-          onChange={handleChange}
-        />
-        <PairLabelInput
-          name={"subject"}
-          value={subject}
-          type={"text"}
-          htmlFor={"subject"}
-          onChange={handleChange}
-        />
-        <label htmlFor="message"></label>
-        <textarea
-          id="message"
-          name="messageInput"
-          rows="5"
-          cols="50"
-          value={message}
-          onChange={handleChange}
-        />
-        <div style={{ color: "red" }}>{error}</div>
-        <input id="submit" type="submit" value="Envoyer" />
-      </form>
+      <main className="container">
+        <h2 className="contact-title">Contactez-nous</h2>
+        <ContactMedias />
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <PairLabelInput
+            name={"name"}
+            value={name}
+            type={"text"}
+            htmlFor={"name"}
+            onChange={handleChange}
+          />
+          <PairLabelInput
+            name={"email"}
+            value={email}
+            type={"text"}
+            htmlFor={"email"}
+            onChange={handleChange}
+          />
+          <PairLabelInput
+            name={"subject"}
+            value={subject}
+            type={"text"}
+            htmlFor={"subject"}
+            onChange={handleChange}
+          />
+          <label htmlFor="message"></label>
+          <textarea
+            id="message"
+            name="messageInput"
+            rows="5"
+            cols="50"
+            value={message}
+            onChange={handleChange}
+          />
+          <div style={{ color: "red" }}>{error}</div>
+          <input id="submit" type="submit" value="Envoyer" />
+        </form>
+      </main>
     </>
   );
 }

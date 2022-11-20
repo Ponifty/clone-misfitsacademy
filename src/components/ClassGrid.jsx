@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import ClassGridItem from "./ClassGridItem.jsx";
 
 export default function ClassGrid() {

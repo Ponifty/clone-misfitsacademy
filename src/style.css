@@ -153,7 +153,6 @@ header {
 }
 
 .class-grid__item button {
-  color: #fff;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -163,6 +162,11 @@ header {
   padding: 0.5em 5em;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.class-grid__item button a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .class-grid__item1 {

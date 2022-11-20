@@ -1,4 +1,5 @@
-// import React from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ClassGridItem() {
   const infosClassesItems = [
@@ -63,6 +64,8 @@ export default function ClassGridItem() {
       level: "DÉBUTANTS",
     },
   ];
+  const [classLink, setClassLink] = React.useState(``);
+  const handleLink = () => {};
   const infosClassesItem = infosClassesItems.map((item, index) => (
     <div
       key={item.id}
@@ -71,7 +74,15 @@ export default function ClassGridItem() {
       <h3>{item.title}</h3>
       <p>{item.public}</p>
       <p>{item.level}</p>
-      <button>+ d'infos</button>
+      <button>
+        <Link
+          to={`/cours/${item.title.replaceAll(" ", "-")}`}
+          target=""
+          onClick={() => setClassLink(`${item.title.replaceAll(" ", "-")}`)}
+        >
+          + d'infos
+        </Link>
+      </button>
     </div>
   ));
   return <>{infosClassesItem}</>;
